@@ -1,20 +1,20 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*Font Declaration for all items*/
+/* Font Declaration for all items */
 body { font-family: 'Poppins', sans-serif; }
 h1, h2, h3, p { font-family: 'Poppins', sans-serif; }
 
-
-/* Promo bar at the top of home */
+/* Promo Bar Styling */
 .promo-bar {
     background-color: #000;
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
     align-items: center;
     padding: 10px;
     font-size: 14px;
@@ -25,59 +25,52 @@ h1, h2, h3, p { font-family: 'Poppins', sans-serif; }
     text-decoration: italic;
 }
 
-.language .dropdown {
-    padding-right: 1cm;
+/* Language Dropdown */
+.language {
     position: relative;
     display: inline-block;
-    
+    margin-left: auto;
 }
 
 .language #current-language {
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .language .dropdown-icon {
     cursor: pointer;
+    font-size: 12px;
 }
 
 .language .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: #fff;;
+    background-color: #fff;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     list-style-type: none;
     margin: 0;
     padding: 10px 0;
     min-width: 100px;
-    z-index: 1;
-}
-
-/*Must be hovering only the language that should be changed*/
-.language .dropdown-menu:hover {
-    color: #fff;
-    background-color:#000;
-    
+    z-index: 2; 
 }
 
 .language .dropdown-menu li {
     padding: 8px 16px;
     text-align: left;
+    cursor: pointer;
 }
 
-.language .dropdown-menu li a {
-    color:  #000;
-    text-decoration: none;
+.language .dropdown-menu li:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.language:hover .dropdown-menu {
     display: block;
 }
 
-/* Show dropdown on hover */
-.language .dropdown:hover .dropdown-menu {
-    display: block;
-}
 
-
-
-/* Header styling */
+/* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -99,6 +92,10 @@ header {
     font-size: 16px;
 }
 
+.nav-links a:hover {
+    color: #000;
+}
+
 .search-cart {
     display: flex;
     align-items: center;
@@ -117,10 +114,11 @@ header {
     font-size: 20px;
 }
 
-/* Sidebar and Banner section */
+/* Sidebar and Banner Section */
 .content {
     display: flex;
     margin: 20px;
+    position: relative; 
 }
 
 .sidebar {
@@ -136,8 +134,39 @@ header {
     padding: 10px;
     background-color: #f8f8f8;
     cursor: pointer;
+    position: relative;
 }
 
+.sidebar ul li:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.sidebar ul li .dropdown-submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 3; /* Ensure it is above the carousel */
+}
+
+.sidebar ul li:hover .dropdown-submenu {
+    display: block;
+}
+
+.sidebar ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: #fff;
+}
+
+/* Carousel Styling */
 .banner {
     position: relative;
     margin-left: 20px;
@@ -147,36 +176,58 @@ header {
     align-items: center;
 }
 
-.banner img {
+.carousel {
+    position: relative;
     width: 100%;
+    overflow: hidden;
     border-radius: 10px;
 }
 
-.banner-text {
+.carousel img {
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Fullscreen Gradient Arrows */
+.carousel .arrow {
     position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
     color: #fff;
-    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.3s ease;
 }
 
-.banner-text h2 {
-    font-size: 36px;
+.carousel .arrow.left {
+    left: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0));
 }
 
-.banner-text p {
-    font-size: 20px;
+.carousel .arrow.right {
+    right: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,0));
 }
 
-.banner-text a {
-    margin-top: 10px;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 5px;
-    text-decoration: none;
+.carousel:hover .arrow {
+    background: rgba(0, 0, 0, 0.7);
 }
 
-/* Flash sales section */
+.carousel:hover .arrow.left {
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+
+.carousel:hover .arrow.right {
+    background: linear-gradient(to left, rgba(0,0,0,0.7), rgba(0,0,0,0));
+}
+
+/* Flash Sales Section */
 .flash-sales {
     margin: 20px;
 }
