@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Font Declaration for all items*/
+body { font-family: 'Poppins', sans-serif; }
+h1, h2, h3, p { font-family: 'Poppins', sans-serif; }
+
+
+/* Promo bar at the top of home */
+.promo-bar {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.promo-bar a {
+    color: #fff;
+    text-decoration: italic;
+}
+
+.language .dropdown {
+    padding-right: 1cm;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.language #current-language {
+    margin-right: 10px;
+}
+
+.language .dropdown-icon {
+    cursor: pointer;
+}
+
+.language .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+    min-width: 100px;
+    z-index: 1;
+}
+
+/*Must be hovering only the language that should be changed*/
+.language .dropdown-menu:hover {
+    color: #fff;
+    background-color:#000;
+    
+}
+
+.language .dropdown-menu li {
+    padding: 8px 16px;
+    text-align: left;
+}
+
+.language .dropdown-menu li a {
+    color:  #000;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show dropdown on hover */
+.language .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #000;
+}
+
+.nav-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.search-cart {
+    display: flex;
+    align-items: center;
+}
+
+.search-cart input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 250px;
+    margin-right: 20px;
+}
+
+.search-cart .icon {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+/* Sidebar and Banner section */
+.content {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 250px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.banner {
+    position: relative;
+    margin-left: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.banner-text {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+}
+
+.banner-text h2 {
+    font-size: 36px;
+}
+
+.banner-text p {
+    font-size: 20px;
+}
+
+.banner-text a {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Flash sales section */
+.flash-sales {
+    margin: 20px;
+}
+
+.flash-sales h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.product .discount {
+    color: #f00;
+    font-size: 16px;
+    margin-top: 10px;
+}
