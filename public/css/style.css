@@ -1,20 +1,19 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Font Declaration for all items */
+/*Font Declaration*/
 body { font-family: 'Poppins', sans-serif; }
 h1, h2, h3, p { font-family: 'Poppins', sans-serif; }
 
-/* Promo Bar Styling */
+/* Promo Bar */
 .promo-bar {
     background-color: #000;
     color: #fff;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     padding: 10px;
     font-size: 14px;
@@ -25,10 +24,11 @@ h1, h2, h3, p { font-family: 'Poppins', sans-serif; }
     text-decoration: italic;
 }
 
-/* Language Dropdown */
+/* Language Dropdown Declaration */
 .language {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     margin-left: auto;
 }
 
@@ -38,8 +38,9 @@ h1, h2, h3, p { font-family: 'Poppins', sans-serif; }
 }
 
 .language .dropdown-icon {
+    font-size: 14px;
     cursor: pointer;
-    font-size: 12px;
+    margin-left: 5px;
 }
 
 .language .dropdown-menu {
@@ -48,9 +49,10 @@ h1, h2, h3, p { font-family: 'Poppins', sans-serif; }
     background-color: #fff;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
     list-style-type: none;
-    margin: 0;
     padding: 10px 0;
     min-width: 100px;
+    top: 100%;
+    right: 0;
     z-index: 2; 
 }
 
@@ -65,9 +67,43 @@ h1, h2, h3, p { font-family: 'Poppins', sans-serif; }
     color: #fff;
 }
 
-.language:hover .dropdown-menu {
+.language:hover .dropdown-menu,
+.language .dropdown-menu:hover { 
     display: block;
 }
+
+
+
+.language .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 10px 0;
+    min-width: 100px;
+    top: 100%;
+    right: 0;
+    z-index: 2; 
+}
+
+.language .dropdown-menu li {
+    padding: 8px 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.language .dropdown-menu li:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.language:hover .dropdown-menu,
+.language .dropdown-menu:hover { 
+    display: block;
+}
+
 
 
 /* Header Styling */
