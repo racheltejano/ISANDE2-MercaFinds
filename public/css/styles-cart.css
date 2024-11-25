@@ -1,0 +1,139 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar input[type="text"] {
+    padding: 5px;
+    margin-left: 15px;
+}
+
+.cart-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin: 20px 40px;
+    font-size: 14px;
+    color: #777;
+}
+
+.breadcrumb a {
+    color: #777;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #333;
+}
+
+/* Cart Section */
+.cart-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.cart-table {
+    width: 60%;
+    border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.remove-item {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cart-total {
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #333;
+}
+
+.cart-total h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.cart-total p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #aaa;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    color: #ddd;
+}
