@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Merca Finds</title>
+    <link rel="stylesheet" href="styles-checkout.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Merca Finds</div>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Orders</a>
+            <a href="#">Chat</a>
+            <a href="#">Sign Up</a>
+            <input type="text" placeholder="What are you looking for?">
+            <div class="cart-icon">
+                <img src="cart-icon.png" alt="Cart Icon">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Home</a> / <a href="#">Shopping Cart</a> / <span>Checkout</span>
+    </div>
+
+    <!-- Checkout Section -->
+    <main class="checkout-container">
+        <!-- Billing Details Form -->
+        <section class="billing-details">
+            <h2>Billing Details</h2>
+            <form>
+                <label for="fullName">Full Name*</label>
+                <input type="text" id="fullName" required>
+
+                <label for="contactNumber">Contact Number*</label>
+                <input type="tel" id="contactNumber" required>
+
+                <label for="streetAddress">Street Address*</label>
+                <input type="text" id="streetAddress" required>
+
+                <label for="apartment">Apartment, floor, etc. (optional)</label>
+                <input type="text" id="apartment">
+
+                <label for="city">Town/City*</label>
+                <input type="text" id="city" required>
+            </form>
+        </section>
+
+        <!-- Order Summary -->
+        <aside class="order-summary">
+            <h3>Order Summary</h3>
+            <div class="order-item">
+                <img src="item-thumbnail.png" alt="Item 1 Thumbnail">
+                <span>Item 1</span>
+                <span>₱XXX</span>
+            </div>
+            <div class="order-item">
+                <img src="item-thumbnail.png" alt="Item 2 Thumbnail">
+                <span>Item 2</span>
+                <span>₱XXX</span>
+            </div>
+            <p class="subtotal">Subtotal: ₱XXX</p>
+            
+            <h3>Mode of Delivery</h3>
+            <label><input type="radio" name="deliveryMode" value="Pickup"> Pickup</label><br>
+            <label><input type="radio" name="deliveryMode" value="Delivery"> Delivery</label>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <h4>Merca Finds</h4>
+            <p>The ultimate one-stop platform for discovering a curated selection of pre-owned and brand-new items</p>
+        </div>
+        <div class="footer-section">
+            <h4>Support</h4>
+            <p>exclusive@gmail.com</p>
+            <p>+88000-88888-9999</p>
+        </div>
+        <div class="footer-section">
+            <h4>Account</h4>
+            <p>My Account</p>
+            <p>Login / Sign Up</p>
+            <p>Shopping Cart</p>
+            <p>Orders</p>
+            <p>Chat</p>
+        </div>
+    </footer>
+
+</body>
+</html>
